@@ -80,15 +80,6 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
 
     // TODO 10 (YOUR TURN): Delete all records in the database
     public static void deleteRecords (Context context) {
-        StepAppOpenHelper databaseHelper = new StepAppOpenHelper(context);
-        SQLiteDatabase database = databaseHelper.getWritableDatabase();
-
-        int numberDeletedRecords = 0;
-
-        numberDeletedRecords = database.delete(StepAppOpenHelper.TABLE_NAME, null, null);
-        database.close();
-
-        Toast.makeText(context, "Deleted + "+ String.valueOf(numberDeletedRecords) + " steps", Toast.LENGTH_LONG).show();
 
     }
 

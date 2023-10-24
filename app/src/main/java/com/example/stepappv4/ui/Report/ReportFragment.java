@@ -54,34 +54,15 @@ public class ReportFragment extends Fragment {
 
         // TODO 11 (YOUR TURN): TODAY button
         button_today = (Button) root.findViewById(R.id.todaySteps_btn);
-        button_today.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int numberOfSteps = stepAppOpenHelper.loadSingleRecord(getContext(), currentDay);
-                Log.d("RETRIEVED STEPS TODAY: ", String.valueOf(numberOfSteps));
-                completedStepsText.setText(String.valueOf(numberOfSteps));
-            }
-        });
+
 
         // TODO 12 (YOUR TURN): GET ENTRIES button
         button_get_all = (Button) root.findViewById(R.id.allSteps_btn);
-        button_get_all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stepAppOpenHelper.loadRecords(getContext());
 
-            }
-        });
 
         // TODO 13 (YOUR TURN): button
         button_delete = (Button) root.findViewById(R.id.deleteSteps_btn);
-        button_delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                stepAppOpenHelper.deleteRecords(getContext());
 
-            }
-        });
 
         return root;
     }
