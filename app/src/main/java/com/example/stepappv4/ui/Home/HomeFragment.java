@@ -228,8 +228,6 @@ class  StepCounterListener implements SensorEventListener{
                 databaseEntry.put(StepAppOpenHelper.KEY_TIMESTAMP, timePointList.get(i));
 
                 // TODO 9 (YOUR TURN):  Put day and hour values in ContentValues
-                databaseEntry.put(StepAppOpenHelper.KEY_DAY, this.day);
-                databaseEntry.put(StepAppOpenHelper.KEY_HOUR, this.hour);
 
                 // TODO 8: Add new record in database
                 database.insert(StepAppOpenHelper.TABLE_NAME, null, databaseEntry);
