@@ -38,8 +38,15 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
 
         String [] columns = new String [] {StepAppOpenHelper.KEY_TIMESTAMP};
-        Cursor cursor = database.query(StepAppOpenHelper.TABLE_NAME, columns, null, null, StepAppOpenHelper.KEY_TIMESTAMP,
-                null, null );
+        Cursor cursor = database.query(
+                StepAppOpenHelper.TABLE_NAME, // 1. Table name
+                columns,                     // 2. Columns to retrieve
+                null,                        // 3. Selection criteria (WHERE)
+                null,                        // 4. Selection arguments (filters)
+                StepAppOpenHelper.KEY_TIMESTAMP, // 5. Group by
+                null,                        // 6. Having
+                null                         // 7. Order by
+        );
 
         // iterate over returned elements
         cursor.moveToFirst();
